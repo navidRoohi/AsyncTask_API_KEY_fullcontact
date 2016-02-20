@@ -53,13 +53,11 @@ public class MainActivity extends AppCompatActivity {
 
             try {
                 URL url = new URL(API_URL + "email=" + email + "&apiKey=" + API_KEY);
-
                 HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
 
                 try {
 
                     BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(urlConnection.getInputStream()));
-
                     StringBuilder stringBuilder = new StringBuilder();
                     String line;
                     while ((line = bufferedReader.readLine()) != null) {
